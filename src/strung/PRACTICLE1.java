@@ -43,5 +43,6 @@ public class PRACTICLE1 {
         int actualNumber=Integer.parseInt(number);
         System.out.println("number is "+ actualNumber);
         System.out.println("Soucet je "+(actualNumber+42));
+
     }
 }
