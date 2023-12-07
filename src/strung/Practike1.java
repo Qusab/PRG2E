@@ -54,6 +54,7 @@ public class Practike1 {
                 break;
             }
 
+
         }
 
         //prevod textu -> velka mala pismena
