@@ -38,6 +38,7 @@ public class PRACTICLE1 {
 
 
 
+
          //vezmi string ve kterm je cislo a pricti k tomu 42
         String number="450";
         int actualNumber=Integer.parseInt(number);
