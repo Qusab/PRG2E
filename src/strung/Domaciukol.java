@@ -153,15 +153,15 @@ public class Domaciukol {
 
 
         // Бонус: Паліндром
-//        String palindromeText = "radar";
-//        boolean isPalindrome = true;
-//        for (int i = 0; i < palindromeText.length() / 2; i++) {
-//            if (palindromeText.charAt(i) != palindromeText.charAt(palindromeText.length() - i - 1)) {
-//                isPalindrome = false;
-//                break;
-//            }
-//        }
-//        System.out.println(isPalindrome);
+        String palindromeText = "radar";
+        boolean isPalindrome = true;
+        for (int i = 0; i < palindromeText.length() / 2; i++) {
+            if (palindromeText.charAt(i) != palindromeText.charAt(palindromeText.length() - i - 1)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        System.out.println(isPalindrome);
 
 
             }

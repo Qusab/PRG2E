@@ -9,14 +9,14 @@ public class PRAVTICLE {
             //nacti string od uzivatele
             //String je heslo
             //nazev musi byt dlouhy aspon 8 znaku
-  //          Scanner sc = new Scanner(System.in);
-//        System.out.println("Zadej mozne heslo:");
-       // String password = sc.nextLine();
-//        if (password.length() < 8){
-//            System.out.println("Neplatne");
-//        } else {
-//            System.out.println(password + " je OK");
-//        }
+            Scanner sc = new Scanner(System.in);
+       System.out.println("Zadej mozne heslo:");
+        String password = sc.nextLine();
+        if (password.length() < 8){
+            System.out.println("Neplatne");
+        } else {
+            System.out.println(password + " je OK");
+        }
 
 //        //heslo musi odpovidat 'secret'
 //        //vypiste, zda uzivatel uhadl
