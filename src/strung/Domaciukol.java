@@ -10,7 +10,7 @@ public class Domaciukol {
         //Є масив users, одна змінна userName. Вивести, чи є в масиві користувач з заданим іменем і вивести результат.
 //        System.out.println("Napis jmeno usera");
 //        String[] user={"userName"};
-//        String uzivatel=sc.nextLine();
+        String uzivatel=sc.nextLine();
 //        for (int i = 0; i < user.length; i++) {
 //            if(uzivatel.equals(user[i])){
 //                System.out.println("Spravne! Mama takoviho clvecka");
