@@ -9,9 +9,9 @@ public class PRAVTICLE {
             //nacti string od uzivatele
             //String je heslo
             //nazev musi byt dlouhy aspon 8 znaku
-            Scanner sc = new Scanner(System.in);
+  //          Scanner sc = new Scanner(System.in);
 //        System.out.println("Zadej mozne heslo:");
-//        String password = sc.nextLine();
+       // String password = sc.nextLine();
 //        if (password.length() < 8){
 //            System.out.println("Neplatne");
 //        } else {
@@ -49,23 +49,23 @@ public class PRAVTICLE {
 //        }
 
             //Pole stringu:
-            String[] passwords = {"ananas", "vodka", "rohlik"};
-            System.out.println("Zkus uhadnout heslo:");
-            String guess = sc.nextLine();
-            for (int i = 0; i < passwords.length; i++) {
-                if (guess.equals(passwords[i])){
-                    System.out.println("Uhadl!");
-                    break;
-                }
-            }
+//            String[] passwords = {"ananas", "vodka", "rohlik"};
+//            System.out.println("Zkus uhadnout heslo:");
+//            String guess = sc.nextLine();
+//            for (int i = 0; i < passwords.length; i++) {
+//                if (guess.equals(passwords[i])){
+//                    System.out.println("Uhadl!");
+//                    break;
+//                }
+//            }
 
             //vypis z pole vsechny Honzy
-            String[] names = {"Ctirad Novák", "Oldřich Starý", "Jan Franta", "Jan Boháč", "František karel"};
-            for (int i = 0; i < names.length; i++) {
-                if (names[i].contains("Jan ")){
-                    System.out.println(names[i]);
-                }
+//            String[] names = {"Ctirad Novák", "Oldřich Starý", "Jan Franta", "Jan Boháč", "František karel"};
+//            for (int i = 0; i < names.length; i++) {
+//                if (names[i].contains("Jan ")){
+//                    System.out.println(names[i]);
+//                }
             }
         }
-    }
+
 
