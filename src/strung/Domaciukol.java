@@ -7,6 +7,7 @@ public class Domaciukol {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
+
         //Є масив users, одна змінна userName. Вивести, чи є в масиві користувач з заданим іменем і вивести результат.
 //        System.out.println("Napis jmeno usera");
 //        String[] user={"userName"};
