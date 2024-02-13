@@ -40,6 +40,5 @@ public class Practice {
         }
         System.out.println(uniqueNumbers);
         System.out.println("Vygenerovano cisel: " + count);
-
     }
 }
