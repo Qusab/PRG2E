@@ -95,37 +95,118 @@ public class Domaci_ukol {
 
 
         //ukol 5
-        double[][] recenze = {
-                {1, 5, 3, 2, 6},
-                {4, 5, 2, 5, 6},
-                {9, 9, 7, 8, 9},
-                {3, 3, 1, 1, 2}
-        };
-        int count = 0;
+//        double[][] recenze = {
+//                {1, 5, 3, 2, 6},
+//                {4, 5, 2, 5, 6},
+//                {9, 9, 7, 8, 9},
+//                {3, 3, 1, 1, 2}
+//        };
+//        int count = 0;
+//
+//        // Projdeme každý film v 2D poli
+//        for (int i = 0; i < recenze.length; i++) {
+//            // Vytvoříme proměnnou pro součet recenzí pro daný film
+//            double sum = 0;
+//
+//            // Projdeme každou recenzi v daném filmu
+//            for (int j = 0; j < recenze[i].length; j++) {
+//                // Přičteme recenzi k součtu
+//                sum += recenze[i][j];
+//            }
+//
+//            // Vypočteme průměrné skóre pro daný film
+//            double average = sum / recenze[i].length;
+//
+//            // Porovnáme průměrné skóre s hodnotou 7.5
+//            if (average > 7.5) {
+//                // Zvýšíme počet filmů
+//                count++;
+//            }
+//        }
+//
+//        // Vypíšeme počet filmů na konzoli
+//        System.out.println("Počet filmů s průměrným skóre > 7.5 je: " + count);
 
-        // Projdeme každý film v 2D poli
-        for (int i = 0; i < recenze.length; i++) {
-            // Vytvoříme proměnnou pro součet recenzí pro daný film
-            double sum = 0;
 
-            // Projdeme každou recenzi v daném filmu
-            for (int j = 0; j < recenze[i].length; j++) {
-                // Přičteme recenzi k součtu
-                sum += recenze[i][j];
-            }
 
-            // Vypočteme průměrné skóre pro daný film
-            double average = sum / recenze[i].length;
 
-            // Porovnáme průměrné skóre s hodnotou 7.5
-            if (average > 7.5) {
-                // Zvýšíme počet filmů
-                count++;
-            }
-        }
+        //bonus
 
-        // Vypíšeme počet filmů na konzoli
-        System.out.println("Počet filmů s průměrným skóre > 7.5 je: " + count);
+
+
+              Scanner scanner = new Scanner(System.in);
+
+                // Rozšíření 1: Uživatel zadává délku strany hracího pole
+                System.out.println("Zadejte délku strany hracího pole:");
+                int delkaStrany = scanner.nextInt();
+
+                // Rozšíření 2: Uživatel zadává počet hledaných pokladů
+                System.out.println("Zadejte počet hledaných pokladů:");
+                int pocetPokladu = scanner.nextInt();
+
+                char[][] hraciPole = new char[delkaStrany][delkaStrany];
+                boolean[][] poklady = new boolean[delkaStrany][delkaStrany];
+
+                // Inicializace hracího pole a umístění pokladů
+                for (int i = 0; i < delkaStrany; i++) {
+                    for (int j = 0; j < delkaStrany; j++) {
+                        hraciPole[i][j] = '-';
+                        poklady[i][j] = false;
+                    }
+                }
+                for (int k = 0; k < pocetPokladu; k++) {
+                    int randomRow = (int) (Math.random() * delkaStrany);
+                    int randomCol = (int) (Math.random() * delkaStrany);
+                    poklady[randomRow][randomCol] = true;
+                }
+
+                int pokusy = 0;
+                while (true) {
+                    // Vykreslení hracího pole
+                    for (int i = 0; i < delkaStrany; i++) {
+                        for (int j = 0; j < delkaStrany; j++) {
+                            System.out.print(hraciPole[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+
+                    // Uživatel zadává souřadnice pole
+                    System.out.println("Zadejte souřadnice pole (řádek sloupec):");
+                    int radek = scanner.nextInt();
+                    int sloupec = scanner.nextInt();
+
+                    // Kontrola platnosti souřadnic
+                    if (radek < 0 || radek >= delkaStrany || sloupec < 0 || sloupec >= delkaStrany) {
+                        System.out.println("Neplatné souřadnice. Zadejte prosím platné souřadnice.");
+                        continue;
+                    }
+
+                    // Zkontrolovat, zda je pole s pokladem
+                    if (poklady[radek][sloupec]) {
+                        System.out.println("Gratulujeme! Našli jste poklad!");
+                        break;
+                    } else {
+                        System.out.println("Smůla! Poklad není na tomto poli.");
+                        hraciPole[radek][sloupec] = 'o';
+                        pokusy++;
+                    }
+                }
+
+                System.out.println("Počet pokusů: " + pokusy);
+                scanner.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
 
