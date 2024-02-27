@@ -1,7 +1,6 @@
-package multiArrays;
+package MultiArrays;
 import javax.swing.*;
 import org.w3c.dom.ls.LSOutput;
-
 public class MatrixPractice {
     public static void main(String[] args) {
         int[][] matrix = new int[5][5];

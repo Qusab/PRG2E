@@ -1,4 +1,4 @@
-package multiArrays;
+package MultiArrays;
 
 public class Multiplications {
     public static void main(String[] args) {
