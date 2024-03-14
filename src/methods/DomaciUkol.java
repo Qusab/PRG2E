@@ -94,5 +94,134 @@ public class DomaciUkol {
 
 
 
+//Napište metodu, která vráơ sumu všech cifer v čísle. Metoda může vypadat například takto:
+//digitsSum(int number), kde uživatel například zadá číslo 456 a výsledek je 15 (4+5+6).
+
+//    public class Main {
+//        public static void main(String[] args) {
+//            int number = 456;
+//            int sum = digitsSum(number);
+//            System.out.println("Součet cifer čísla " + number + " je: " + sum);
+//        }
+//
+//        public static int digitsSum(int number) {
+//            int sum = 0;
+//            while (number != 0) {
+//                sum += number % 10; // Získáme poslední číslici a přičteme ji k sumě
+//                number /= 10; // Odstraníme poslední číslici
+//            }
+//            return sum;
+//        }
+//    }
+
+
+
+
+
+//Napište metodu hosts(String ip), která přebere IP adresu ve formátu např. 192.168.1.8/24.
+//Zjistěte číslo prefixu (v tomhle případě /24) a spočtěte a přes metodu vraťte počet možných
+//adres ze sítě (v případě /24 je to 256 [což je 28
+//] možností: 192.168.1.0-255).
+//Předpokládejte uživatele, který vždy zadá korektní IP, kontrolu vstupu neřešte.
+
+//    public class Main {
+//        public static void main(String[] args) {
+//            String ip = "192.168.1.8/24";
+//            int possibleHosts = hosts(ip);
+//            System.out.println("Počet možných hostů v síti je: " + possibleHosts);
+//        }
+//
+//        public static int hosts(String ip) {
+//            String[] parts = ip.split("/");
+//            String[] ipParts = parts[0].split("\\.");
+//            int prefix = Integer.parseInt(parts[1]);
+//            int suffix = 32 - prefix; // Počet bitů pro hosty
+//            int possibleHosts = (int) Math.pow(2, suffix);
+//            return possibleHosts;
+//        }
+//    }
+
+
+
+
+//    Bonus:
+//    Příklad 7 upravte do prakƟčtější podoby:
+//    a) V počtu dostupných adres v síƟ by dvě měly být rezervovány. Adresa pro broadcast a
+//    adresa pro výchozí bránu. Upravte příklad tak, aby vracel korektní počet.
+//    b) Do konzole vypište i informaci, do jaké třídy IP adresa spadá (A-E).
+//    c) Do konzole vypište masku v podobě uvedené např ve Windows: /24 má masku
+//255.255.255.0
+
+
+
+
+
+
+    //public class Main {
+    //    public static void main(String[] args) {
+    //        String ip = "192.168.1.8/24";
+    //        int[] result = hosts(ip);
+    //        int possibleHosts = result[0];
+    //        int[] subnetMask = result[1];
+    //        char classType = getClassType(ip);
+    //
+    //        System.out.println("Počet možných hostů v síti (bez broadcast a výchozí brány): " + possibleHosts);
+    //        System.out.println("Třída IP adresy: " + classType);
+    //        System.out.print("Maska sítě: ");
+    //        for (int i = 0; i < subnetMask.length; i++) {
+    //            System.out.print(subnetMask[i]);
+    //            if (i < subnetMask.length - 1)
+    //                System.out.print(".");
+    //        }
+    //        System.out.println();
+    //    }
+    //
+    //    public static int[] hosts(String ip) {
+    //        String[] parts = ip.split("/");
+    //        String[] ipParts = parts[0].split("\\.");
+    //        int prefix = Integer.parseInt(parts[1]);
+    //        int suffix = 32 - prefix;
+    //        int possibleHosts = (int) Math.pow(2, suffix) - 2; // Počet možných hostů bez broadcast a výchozí brány
+    //
+    //        int[] subnetMask = calculateSubnetMask(prefix);
+    //
+    //        int[] result = {possibleHosts, subnetMask};
+    //        return result;
+    //    }
+    //
+    //    public static int[] calculateSubnetMask(int prefix) {
+    //        int[] subnetMask = new int[4];
+    //        for (int i = 0; i < 4; i++) {
+    //            if (prefix >= 8) {
+    //                subnetMask[i] = 255;
+    //                prefix -= 8;
+    //            } else {
+    //                subnetMask[i] = (int) (256 - Math.pow(2, 8 - prefix));
+    //                prefix = 0;
+    //            }
+    //        }
+    //        return subnetMask;
+    //    }
+    //
+    //    public static char getClassType(String ip) {
+    //        String[] ipParts = ip.split("\\.");
+    //        int firstOctet = Integer.parseInt(ipParts[0]);
+    //        if (firstOctet >= 1 && firstOctet <= 126)
+    //            return 'A';
+    //        else if (firstOctet >= 128 && firstOctet <= 191)
+    //            return 'B';
+    //        else if (firstOctet >= 192 && firstOctet <= 223)
+    //            return 'C';
+    //        else if (firstOctet >= 224 && firstOctet <= 239)
+    //            return 'D';
+    //        else
+    //            return 'E';
+    //    }
+    //}
+
+
+
+
+
 
 }
