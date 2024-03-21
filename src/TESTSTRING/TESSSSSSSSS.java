@@ -15,5 +15,10 @@ public class TESSSSSSSSS {
 //            }
 //        }
 //        System.out.println(wordCount);
+        int A=100;
+            if (A < 20  ||  A % 2 ==1){
+                System.out.println(true);
+            }
+        }
     }
-}
+
