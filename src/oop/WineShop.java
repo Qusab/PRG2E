@@ -5,12 +5,15 @@ public class WineShop {
     int count;
     int balance;
     public final int BUY_PRICE = 200;
+    //něco co nemění
 
     boolean sell(int count){
         if(this.count > count){
             balance += count * pricePerBottle;
 //            this.count = this.count - count;
             this.count -= count;
+            //to je novy
+            //            a tuto je jenom v methods
             System.out.println("Uspesne prodano");
             return true;
         }else {
